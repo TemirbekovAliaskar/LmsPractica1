@@ -6,7 +6,7 @@ import groupsPeaksoft.Students;
 
 public class DataBase {
 
-    Group [] groups = new Group[0];
+  public static   Group [] groups = new Group[0];
 
 
 }

@@ -9,7 +9,8 @@ public class Students {
     private String password;
     private String gender;
 
-    Group [] groups = new Group[0];
+    public Students() {
+    }
 
     public Students(int id, String firstName, String lastName, String email, String password, String gender) {
         this.id = id;
@@ -19,6 +20,8 @@ public class Students {
         this.password = password;
         this.gender = gender;
     }
+
+
 
     public int getId() {
         return id;
@@ -69,15 +72,16 @@ public class Students {
     }
 
 
+
+
     @Override
     public String toString() {
-        return "Students{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", gender='" + gender + '\'' +
-                '}';
+        return  "\uD83D\uDC68‍🎓 Students Information 📚\n" +
+                "ID: " + id +
+                "\nFirst Name: " + firstName +
+                "\nLast Name: " + lastName +
+                "\nEmail: " + email +
+                "\nPassword: " + password +
+                "\nGender: " + gender;
     }
 }

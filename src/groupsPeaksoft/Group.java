@@ -7,8 +7,13 @@ public class Group {
     private int id;
     private String name;
     private String description;
-    private Students [] students;
-    private Lesson [] lessons;
+    public Students[] students = new Students[0];
+    public Lesson[] lessons = new Lesson[0];
+
+    public Group() {
+    }
+
+    ;
 
     public Group(int id, String name, String description, Students[] students, Lesson[] lessons) {
         this.id = id;
@@ -58,14 +63,18 @@ public class Group {
         this.lessons = lessons;
     }
 
+
+
+
+
     @Override
     public String toString() {
-        return "Group{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", students=" + Arrays.toString(students) +
-                ", lessons=" + Arrays.toString(lessons) +
-                '}';
+        return "👥 Group Information\n" +
+                "ID: " + id +
+                "\nName: " + name +
+                "\nDescription: " + description +
+                "\nStudents: " + Arrays.toString(students) +
+                "\nLessons: " + Arrays.toString(lessons);
     }
+
 }

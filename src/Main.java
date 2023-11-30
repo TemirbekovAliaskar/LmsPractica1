@@ -23,7 +23,7 @@ public class Main {
         innerLoop:
         while (true) {
             Scanner scanner = new Scanner(System.in);
-            time();
+            currentTime();
             System.out.println("""
                      1. SIGN UP 📝
                      2. CREATE ACCOUNT 🆕
@@ -99,17 +99,18 @@ public class Main {
                 """);
     }
 
-    public static void time(){
-        ZonedDateTime zonedDateTime = ZonedDateTime.now();
-        DateTimeFormatter coorect = DateTimeFormatter.ofPattern("HH:mm");
-        int timeday = zonedDateTime.getHour();
-
-        if (timeday > 6 && timeday < 10){
-            System.out.println("Good morning ! " + coorect.format(zonedDateTime));
-        } else if (timeday > 10 && timeday < 17) {
-            System.out.println("Good day !" + coorect.format(zonedDateTime));
-        } else if (timeday >17 && timeday < 23) {
-            System.out.println("Good evening !" + coorect.format(zonedDateTime));
-        }else System.out.println("Good night ");
+    public static void currentTime() {
+        ZonedDateTime currentTime = ZonedDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+        int currentTimeHour = currentTime.getHour();
+        if (currentTimeHour >= 4 && currentTimeHour < 11) {
+            System.out.println("*************** Good morning! саат -> " + currentTime.format(formatter)+" ***************");
+        } else if (currentTimeHour >= 11 && currentTimeHour < 17) {
+            System.out.println("*************** Good day " + currentTime.format(formatter)+" ***************");
+        } else if (currentTimeHour >= 17 && currentTimeHour < 22) {
+            System.out.println("*************** Good evening! саат -> " + currentTime.format(formatter)+" ***************");
+        }else {
+            System.out.println("*************** Good night ! саат -> " + currentTime.format(formatter)+" ***************");
+        }
     }
 }

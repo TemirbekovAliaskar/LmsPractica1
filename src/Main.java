@@ -15,6 +15,15 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
+
+
+      static Admin admin = new Admin();
+      static AdminService adminService = new Adminimpl();
+      static StudentService studentService = new Studentsimpl();
+      static LessonService lessonService = new Lessonimpl();
+
+      static GroupService groupService = new Groupsimpl();
+
     public static void main(String[] args) {
         System.out.println("test1");
 
